@@ -10,6 +10,7 @@
             @if (count($articles)>0)
             <!-- Post preview-->
            @foreach ($articles as $article )
+           @if($article->status == 1)
            <div class="post-preview">
             <a href="{{route('single',$article->slug)}}">
                 <h2 class="post-title">{{$article->title}}</h2>
@@ -22,10 +23,10 @@
                <span class="float-end"> {{$article->created_at->diffForHumans()}}</span>
             </p>
         </div>
-        
+      
         <!-- Divider-->
         <hr class="my-4" />
-   
+        @endif
            @endforeach
            
             <!-- Pager-->

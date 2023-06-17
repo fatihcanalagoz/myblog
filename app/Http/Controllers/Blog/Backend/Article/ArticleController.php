@@ -95,10 +95,6 @@ class ArticleController extends Controller
             'image' => 'image|mimes:jpg,png,jpeg|max:2048',
         ]);
         $model =  Article::findOrFail($id);
-        if( $model->whereTitle($request->title)  ){
-           
-            return redirect()->back()->withErrors('Bu isimde blog yazısı mevcut.');
-           }
         $model->title=$request->title;
         $model->category_id=$request->category;
         $model->content=$request->content;

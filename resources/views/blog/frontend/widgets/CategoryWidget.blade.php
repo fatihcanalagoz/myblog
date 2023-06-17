@@ -9,7 +9,7 @@
                         <div class="list-group">
                   @foreach ($categories as $category )
                   <li class="list-group-item ">
-                    <a href="{{route('category',$category->slug)}}" class=" @if(Request::segment(2) === $category->slug) text-info @endif">{{$category->name}}</a> <span class="badge bg-black float-end ">{{$category->articleCount()}}</span>
+                    <a href="{{route('category',$category->slug)}}" class=" @if(Request::segment(2) === $category->slug) text-info @endif">{{$category->name}}</a>  
                 </li>
                   @endforeach
  

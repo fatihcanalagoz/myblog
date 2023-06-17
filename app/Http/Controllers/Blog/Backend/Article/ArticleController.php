@@ -43,8 +43,8 @@ class ArticleController extends Controller
             'image' => 'required|mimes:jpg,png,jpeg|max:2048',
         ]);
         $model = new Article();
-       
-       if( $model->whereTitle($request->title)  ){
+       $titleControl = $model->whereTitle($request->title)->first();
+       if($titleControl){
            
         return redirect()->back()->withErrors('Bu isimde blog yazısı mevcut.');
        }

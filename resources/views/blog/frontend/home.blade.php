@@ -14,7 +14,7 @@
                     <h3 class="post-subtitle">{{ Str::limit(strip_tags($article->content, 100)) }}</h3>
                 </a>
                 <p class="post-meta">
-                    Kategori: <a href="#!">{{ $article->getCategory->name }}</a>
+                    Kategori <a href="#!">{{ $article->getCategory->name }}</a>
                     <span class="float-end"> {{ $article->created_at->diffForHumans() }}</span>
                 </p>
             </div>

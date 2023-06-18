@@ -1,6 +1,7 @@
 @extends('blog.frontend.layouts.app')
 @section('title',$article->title)
 @section('bg',$article->image)
+ 
 @section('content')
         <!-- Main Content-->
       
@@ -15,5 +16,10 @@
                <p class="text-muted float-end">
                 {{$article->hit}} kişi tarafından okundu.
             </p>
-   
+            
+<hr>
+
+          @include('blog.frontend.widgets.CommentWidget')
+
+
 @endsection

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Blog\Frontend\CommentController;
 use App\Http\Controllers\Blog\Backend\Auth\AuthController;
 use App\Http\Controllers\Blog\Frontend\HomepageController;
 use App\Http\Controllers\Blog\Backend\Article\ArticleController;
@@ -28,6 +29,9 @@ Route::get('/contact', [HomepageController::class,'contact'])->name('contact');
 Route::post('/contact', [HomepageController::class,'postContact'])->name('contact.post');
 Route::get('/category/{category}', [HomepageController::class,'category'])->name('category');
 Route::get('/blog/{slug}', [HomepageController::class,'single'])->name('single');
+//Comment Part
+Route::post('/article/{id}/comment' ,[CommentController::class,'makeComment'])->name('make.comment');
+Route::get('/comment/{id}/delete' ,[CommentController::class,'deleteComment'])->name('delete.comment');
 /*
 /--------------------------------------------------------------------------
 */

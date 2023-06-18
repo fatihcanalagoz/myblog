@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\ArticleSeeder;
+use Database\Seeders\CategorySeeder;
 use Database\Seeders\AdminLoginSeeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,7 +23,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
        
-        $this->call(ArticleSeeder::class);
+      
         $this->call(AdminLoginSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }

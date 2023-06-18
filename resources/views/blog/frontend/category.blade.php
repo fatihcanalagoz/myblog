@@ -14,7 +14,7 @@
            <div class="post-preview">
             <a href="{{route('single',$article->slug)}}">
                 <h2 class="post-title">{{$article->title}}</h2>
-                <h3 class="post-subtitle">{{Str::limit($article->content,100)}}</h3>
+                <h3 class="post-subtitle">{{Str::limit(strip_tags($article->content,100))}}</h3>
             </a>
             <p class="post-meta">
              

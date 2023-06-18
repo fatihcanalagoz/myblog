@@ -14,4 +14,7 @@ class Article extends Model
     public function getCategory(){
         return $this->hasOne(Category::class,'id','category_id');
     }
+    public function getComment(){
+        return $this->hasMany(Comment::class,'id','comment_id');
+    }
 }

@@ -185,6 +185,7 @@ return [
         'content' => 'Içerik',
         'category' => 'Kategori',
         'title' => 'Başlık',
+        'comment' => 'Yorum',
     ],
 
 ];
